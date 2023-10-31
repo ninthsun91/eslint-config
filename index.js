@@ -49,12 +49,22 @@ module.exports = {
     'array-callback-return': 'error',
     'block-scoped-var': 'error',
     'eqeqeq': ['error', 'always'],
+    'max-statements-per-line': ['error', { max: 1 }],
     'no-multi-spaces': 'error',
     'no-multi-str': 'error',
     'no-invalid-this': 'error',
     'no-return-assign': 'off',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+        caughtErrors: 'none',
+      }
+    ],
     'operator-linebreak': ['error', 'before'],
-    'max-statements-per-line': ['error', { max: 1 }],
 
     // async rules
     'max-nested-callbacks': ['error', { max: 3 }],
