@@ -54,7 +54,6 @@ module.exports = {
     'no-multi-str': 'error',
     'no-invalid-this': 'error',
     'no-return-assign': 'off',
-    'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
       {
@@ -62,6 +61,8 @@ module.exports = {
         args: 'after-used',
         argsIgnorePattern: '^_',
         caughtErrors: 'none',
+        ignoreRestSiblings: true,
+        destructuredArrayIgnorePattern: '^_',
       }
     ],
     'operator-linebreak': ['error', 'before'],
