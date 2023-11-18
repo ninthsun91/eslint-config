@@ -185,6 +185,15 @@ module.exports = {
     'lines-between-class-members': 'off',
     'multiline-ternary': 'off',
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 0 }],
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: { consistent:  true },
+        ObjectPattern: { consistent:  true },
+        ImportDeclaration: { multiline: true, consistent:  true },
+        ExportDeclaration: { multiline: true, minProperties: 2 },
+      },
+    ],
     '@typescript-eslint/lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
   },
   parserOptions: {
